@@ -10,7 +10,9 @@
   "scripts": {
     "build": "webpack",
     "lint": "standard",
-    "test": "standard && webpack --bail"
+    "test": "standard && webpack --bail",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bugs": {
     "url": "https://github.com/rach/pgboard/issues"
@@ -33,7 +35,7 @@
     "style-loader": "^0.13.0",
     "webpack": "^2.2.0",
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "react-faux-dom": "^2.1.1",
     "d3": "^3.5.9",
     "redux": "^3.0.4",
@@ -48,9 +50,11 @@
     "filesize": "^3.1.4",
     "react-loader": "^2.0.0",
     "memoize-decorator": "^1.0.2",
-    "babel-plugin-syntax-decorators": "^6.5.0"
+    "babel-plugin-syntax-decorators": "^6.5.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "standard": "^5.3.1"
-  }
+  },
+  "snyk": true
 }
